@@ -1,4 +1,4 @@
-# simple-component-library
+# simple-modal-library
 A library of React components created using `create-react-app`.
 
 > For support for **react <18.0.0**,**react-dom <18.0.0**,**react-scripts <5.0.0**
