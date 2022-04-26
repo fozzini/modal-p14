@@ -9,7 +9,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _reactFontawesome = _interopRequireDefault(require("react-fontawesome"));
+var _xmark = _interopRequireDefault(require("./xmark.svg"));
 
 require("./modal.css");
 
@@ -19,11 +19,15 @@ var Modal = function Modal(props) {
     className: "overlay"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "content"
-  }, /*#__PURE__*/_react.default.createElement(_reactFontawesome.default, {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     name: "times",
     onClick: closeModal,
+    "aria-label": "close icon",
     className: "icon"
-  }), props.children));
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _xmark.default,
+    alt: ""
+  })), props.children));
 };
 
 var _default = Modal;

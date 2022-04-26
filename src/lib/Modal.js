@@ -1,5 +1,5 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
+import xmark from './xmark.svg'
 import "./modal.css";
 const Modal = ( props ) => {
   const { closeModal } = props;
@@ -7,7 +7,8 @@ const Modal = ( props ) => {
   return (
     <div className="overlay">
       <div className="content">
-      <FontAwesome name="times" onClick={closeModal} className='icon'/>
+      <span name="times" onClick={closeModal} aria-label="close icon" className='icon'>
+        <img src={xmark} alt=""/></span>
       {props.children}
       </div>
     </div>
