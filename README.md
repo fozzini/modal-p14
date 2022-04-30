@@ -1,4 +1,5 @@
 # simple-modal-library
+
 A library of React components created using `create-react-app`.
 
 > For support for **react <18.0.0**,**react-dom <18.0.0**,**react-scripts <5.0.0**
@@ -10,34 +11,46 @@ npm i modal-component-p14
 
 ```
 
+## Component
+
+```js
+import React from 'react';
+import xmark from './xmark.svg'
+import "./modal.css";
+const Modal = ( props ) => {
+  const { closeModal } = props;
+  
+  return (
+    <div className="overlay">
+      <div className="content">
+      <span name="times" onClick={closeModal} aria-label="close icon" className='icon'>
+        <img src={xmark} alt=""/></span>
+        <p>{props.str}</p>
+      </div>
+    </div>
+  );
+};
+```
+
 ## Usage
 
 ```js
 import React from 'react'
 import Modal from "modal-component-p14/dist/Modal"
 ...
-```
-
-## Hooks
-
-```js
 const [openModal, setOpenModal] = useState(false);
-
-```
-## component
-
-```js
+const str = "Employee Created!"
+...
 {openModal && (
-        <Modal closeModal={() => setOpenModal(false)}>
-          <p>Employee Created!</p>
-        </Modal>
- )}
-
+  <Modal str={str} closeModal={() => setOpenModal(false)}></Modal>
+ )
+}
+...
 ```
+
 ## CSS
 
 ```css
-css used : 
  
  .overlay {
   position: fixed;

@@ -27,7 +27,7 @@ var Modal = function Modal(props) {
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: _xmark.default,
     alt: ""
-  })), props.children));
+  })), /*#__PURE__*/_react.default.createElement("p", null, props.str)));
 };
 
 var _default = Modal;

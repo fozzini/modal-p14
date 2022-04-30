@@ -1,7 +1,9 @@
 {
   "homepage": "",
   "name": "modal-component-p14",
-  "version": "0.1.6",
+  "version": "0.1.8",
+  "description": "A simple modal component",
+  "author": "Foezon Florian <ffoezon@gmail.com>",
   "dependencies": {
    
   },

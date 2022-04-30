@@ -9,7 +9,7 @@ const Modal = ( props ) => {
       <div className="content">
       <span name="times" onClick={closeModal} aria-label="close icon" className='icon'>
         <img src={xmark} alt=""/></span>
-      {props.children}
+        <p>{props.str}</p>
       </div>
     </div>
   );
